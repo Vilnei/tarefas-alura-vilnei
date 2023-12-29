@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./codigo"
+    ],
+    "git.ignoreLimitWarning": true
+}
