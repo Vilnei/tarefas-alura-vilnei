@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        <div class="container">
+
+            <h2 class="text-center">Faça seu LOGIN.</br>Por favor!</h2></br>
+
+            <form method="post" action="{{ url_for('autenticar') }}">
+
+                <div class="form-group">
+
+                    <input type="hidden" name="proxima" value="{{ proxima }}">
+                    
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" class="form-control" id="username" name="usuario" placeholder="Digite seu nome de usuário" required></br>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" class="form-control" id="password" name="senha" placeholder="Digite sua senha" required></br>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+{% endblock %}

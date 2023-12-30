@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <div class="container">
+        {% if session['usuario_logado'] %}
+            <div>
+                <h1>Pagina de edição</h1></br>
+                <h1>Editando o QRcode <strong>{{ qrcode }}</strong></h1></br>
+                <h1> Que Deus te proteja e guarde!!!</h1></br>
+
+                <div class="valores">
+                    <span class="valor"><R1>{{ valor }}</R1></span>
+                    <span class="dinheiros">"Dinheiros"</span>
+                </div>
+                </br></br>
+                <form method="POST">
+                    <lambel>Edição de valores</lambel>
+                    <input type="number" min="0" max="999999999" id="valor" name="valoraplicado" placeholder="Digite o valor">
+                    <button type="submit" class="btn btn-outline-primary">Aplicar</button>
+                </form>
+                </br></br>
+                <h1><a href="{{ url_for('logout') }}">Deslogar Para Teste</a></h1></br></br>
+            </div>
+
+        {% else %}
+            <div>
+                <h1>Deus reine sobre sua vida.</h1>
+                <h1>Você tem...</h1></br></br>
+                <div class="valores">
+                    <span class="valor"><R1>{{ valor }}</R1></span>
+                    <span class="dinheiros">"Dinheiros"</span>
+                </div>
+                </br></br>
+                <h1>...para investir em benção!</h1>
+            </div>
+        {% endif %}
+        
+    </div>
+{% endblock %}
+

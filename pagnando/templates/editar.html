@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<div class="container">
+<h1>Pagina de Edição de valores no "Atacado"</br></br></h1>
+<h4>Na 1° coluna confira o numero do QRCode</br></br>
+     Na 2° coluna confira o valor que tem no momento</br></br>
+      Na 3° coluna vc digita o valor do NOVO saldo</br></br>
+       Na 4° coluna vc aplicar as alteraçoes</br></br>
+    <strong>Obs:</strong> o valor colocado na seção "Editar Valores", sera o novo saldo, ele não vai somar ou diminuir e sim <strong>SUBISTITUIR</strong> o novo valor</h4>
+    <table class="table">
+
+        <thead class="thead-default">
+
+            <tr>
+                <th>Qrcodes</th>
+                <th>Valores</th>
+                <th>Editar Valores</th>
+                <th>Aplicação</th>
+            </tr>
+
+        </thead>
+
+        <form method="post">
+            <tbody>
+
+                {% for qr in qrcodes %}
+
+                    <tr>
+                        <td><a href="/{{ qr }}"> Qr {{ qr }} </a></td>
+                        <td> {{ qrcodes[qr] }} </td>
+                        <td><input type="number" min="0" max="999999999" name="valorqrcode_{{ qr }}" placeholder="Digite o valor"></td>
+                        <td><button type="submit" class="btn btn-warning" name="qr" value="{{ qr }}">Aplicar</button></td>
+
+                    </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </form>
+
+    </table>
+    
+    
+</div>
+{% endblock %}
