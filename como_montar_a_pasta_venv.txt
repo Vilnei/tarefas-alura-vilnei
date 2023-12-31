@@ -1,0 +1,18 @@
+    para criar a pasta venv
+py -3 -m venv venv
+onde o segundo venv vai ser o nome da pasta, normamente se usa o nome venv tb pra facilitar mas, pode ser qualquer coisa
+
+    para ativar o ambiente virtual
+source venv/Scripts/activate
+onde o "S" de Scripts e maisculo msm.
+
+    Criando o arquivo __init__
+quando criar a pasta para o ambiente virtual ela deve contar um arquivo em branco com o nome __init__.py para servir de modulo p o pytest
+
+    para criação do arquivo requirements.txt
+pip freeze > requirements.txt
+onde esse arquivo vai ficar salvo todos os pacotes, ultilizadas no momento do desenvolvimento do codigo.
+
+    criação de pasta test e arquivo de inicialização do pytest
+tem que ser criada uma pasta dentro do diretorio "mae" com o nome tests.
+e dentro dessa pasta tem q se criar um arquivo python começando com o nome test_...
