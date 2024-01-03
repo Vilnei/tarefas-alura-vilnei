@@ -1,0 +1,26 @@
+
+.background {
+    background-image: url(PIB\ jatai.jpg);
+    background-attachment: fixed;
+}
+
+
+header {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+footer {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+main {
+    background-color: rgba(255, 254, 254, 0.5);
+}
+
+#quemSomos, #atividades, #localizacao {
+    background-color: rgba(255, 254, 254, 0.5);
+}
+.link-secondary {
+    --bs-secondary-rgb: black;
+}
+/* --bs-bg-opacity: 0.2;    essa da opacidade nas cores do bootstrap */
